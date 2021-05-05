@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Styling -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+
+		<div id="app">
+			<div id="header"></div>
+			<div id="headerTextWrapper">
+				<h1 id="headerText">Concurrent Reading</h1>
+			</div>
+
+			<div id="bodyContainer"></div>
+			<div id="bodyBlock">
+
+				<div v-if="mode == 0">
+					<p id="roomText">Enter Room ID</p>
+					<input id="roomID" type="text" placeholder="Room ID" v-model="enterRoomID">
+					<input id="nameInput" type="text" placeholder="Name" v-model="nameInput">
+
+					<button id="submitRoomButton" v-on:click="AttemptToEnterRoom">Submit</button>
+					<button id="createNewRoomButton" v-on:click="StartCreatingNewRoom">Create New Room</button>
+				</div>
+
+				<div v-if="mode == 1">
+					<textarea v-model="bookInput" type="text" id="bookInput" placeholder="Please enter the text you'd like to go over with your students."></textarea>
+					<button id="createNewRoomButton" v-on:click="CreateNewRoom">Create Room</button>
+				</div>
+
+				<div v-if="mode == 2">
+					<p id="roomTextHighlighted" v-if="reader">You're currently the reader.</p>
+					<p id="roomText" v-else>You're not currently the reader.</p>
+					<p id="studentsText">{{ roomText }}</p>
+				</div>
+
+				<div v-if="mode == 3">
+					<p id="roomText">Your Room ID Is: {{ currentRoomID }}</p>
+					<p id="teachersText">{{ bookInput }}</p>
+					<div id=selectable>
+						<div class="student" v-for="student in students" v-on:click="SelectStudent(student)" v-bind:class="student.style">
+							<p class="studentText">{{ student.name }}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Javascript -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

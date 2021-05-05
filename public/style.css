@@ -1,0 +1,242 @@
+html { 
+	background: url("Images/background.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#header {
+	position: fixed;
+	top: 0px;
+	left: 2.5%;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+	background: white;
+	opacity: 30%;
+	width: 95%;
+	height: 18%;
+	z-index: -1;
+}
+
+#headerTextWrapper {
+	position: fixed;
+	top: 1%;
+	left: 3.5%;
+	border: 2px solid black;
+	background: white;
+	width: 93%;
+	height: 15%;
+	background-color: #E8C9B7;
+}
+
+#headerText {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 250%;
+	user-select: none;
+}
+
+#bodyContainer {
+	position: fixed;
+	top: 20%;
+	left: 2.5%;
+	border: 2px solid black;
+	background: white;
+	opacity: 30%;
+	width: 95%;
+	height: 77%;
+	z-index: -1;
+}
+
+#bodyBlock {
+	position: fixed;
+	top: 22%;
+	left: 3.5%;
+	border: 2px solid black;
+	background: #FFE5C9;
+	width: 93%;
+	height: 73%;
+}
+
+#roomText {
+	position: fixed;
+	left: 50%;
+	top: 27%;
+	width: 50%;
+	margin-left: -calc(25%);
+	transform: translate(-50%, -50%);
+	font-size: 200%;
+	text-align: center;
+	user-select: none;
+}
+
+#roomTextHighlighted {
+	position: fixed;
+	left: 50%;
+	top: 27%;
+	width: 50%;
+	margin-left: -calc(25%);
+	transform: translate(-50%, -50%);
+	font-size: 200%;
+	text-align: center;
+	user-select: none;
+	color: red;
+	user-select: none;
+}
+
+#roomID {
+	position: fixed;
+	top: 35%;
+	left: 37.5%;
+	width: 25%;
+	height: 10%;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	font-size: 125%;
+	color: black !important;
+	padding-left: 0.5em;
+	user-select: none;
+}
+
+#nameInput {
+	position: fixed;
+	top: 50%;
+	left: 37.5%;
+	width: 25%;
+	height: 10%;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	font-size: 125%;
+	color: black !important;
+	padding-left: 0.5em;
+	user-select: none;
+}
+
+#submitRoomButton {
+	position: fixed;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	font-size: 120%;
+	width: 15%;
+	height: 7%;
+	top: 65%;
+	left: 42.5%;
+	cursor: pointer;
+	user-select: none;
+}
+
+#createNewRoomButton {
+	position: fixed;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	font-size: 120%;
+	width: 15%;
+	height: 7%;
+	top: 87%;
+	left: 42.5%;
+	cursor: pointer;
+	user-select: none;
+}
+
+#bookInput {
+	position: fixed;
+	top: 25%;
+	left: 5.5%;
+	width: 89%;
+	height: 60%;
+	font-size: 150%;
+	background-color: #E8BBB7;
+	padding: 0.5em;
+	box-sizing: border-box;
+}
+
+#teachersText {
+	position: fixed;
+	top: 32%;
+	left: 5.5%;
+	width: 70%; /* Used to be 89% */
+	height: 58%;
+	font-size: 150%;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	overflow-y: scroll;
+	white-space: pre-wrap;
+	padding: 6px;
+}
+
+#selectable {
+	position: fixed;
+	width: 17%;
+	height: 59.5%;
+	top: 32%;
+	left: 77.5%;
+	background-color: #E8C9B7;
+	border: 2px solid black;
+	overflow: none; 
+	overflow-y: scroll; 
+	white-space: nowrap;
+}
+
+.student {
+	cursor: pointer;
+	border-bottom: 2px solid black;
+	height: 10%;
+	width: 100%;
+}
+
+.selectedStudent {
+	cursor: pointer;
+	border-bottom: 2px solid black;
+	height: 10%;
+	width: 100%;
+	background-color: #E8BBB7;
+}
+
+.studentText {
+	user-select: none;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 100%;
+}
+
+#studentsText {
+	position: fixed;
+	top: 32%;
+	left: 5.5%;
+	width: 89%;
+	height: 58%;
+	font-size: 150%;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	overflow-y: scroll;
+	white-space: pre-wrap;
+	padding: 6px;
+	user-select: none;
+}
+
+#selectedText {
+	background-color: yellow;
+}
